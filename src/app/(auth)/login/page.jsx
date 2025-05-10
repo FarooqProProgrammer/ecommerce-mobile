@@ -1,10 +1,12 @@
-import AuthLayout from '@/components/Layout/AuthLayout'
-import React from 'react'
+import AuthLayout from "@/components/Layout/AuthLayout";
+import React from "react";
 
 const Login = () => {
   return (
-    <AuthLayout></AuthLayout>
-  )
-}
+    <AuthLayout title="Welcome to Stylish">
+      <div></div>
+    </AuthLayout>
+  );
+};
 
-export default Login
+export default Login;
