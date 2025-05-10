@@ -15,7 +15,10 @@ const Home = ({ children }) => {
   const router = useRouter();
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowSplash(false), 2000);
+    const timer = setTimeout(() => {
+      setShowSplash(false);
+      router.push("/login")
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -48,3 +51,5 @@ const Home = ({ children }) => {
 };
 
 export default Home;
+
+
