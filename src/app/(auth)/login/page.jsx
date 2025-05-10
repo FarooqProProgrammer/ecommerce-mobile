@@ -1,4 +1,5 @@
 import AuthLayout from "@/components/Layout/AuthLayout";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { PasswordIcon } from "@/lib/Icon";
 import { UserIcon } from "lucide-react";
@@ -33,10 +34,13 @@ const Login = () => {
               }
             />
           </div>
-          <Link href={"#!"} className="mt-3 text-end text-[#f83758]">
+        </div>
+        <div className="flex justify-end">
+          <Link href={"#!"} className="mt-4 text-sm text-[#f83758]">
             Forgot Password?
           </Link>
         </div>
+        <Button className={'mt-5 w-full h-[55px] text-xl'}>Login</Button>
       </form>
     </AuthLayout>
   );
