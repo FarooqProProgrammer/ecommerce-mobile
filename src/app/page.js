@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const splashVariants = {
   hidden:  { opacity: 0, scale: 0.8 },
@@ -11,6 +12,7 @@ const splashVariants = {
 
 const Home = ({ children }) => {
   const [showSplash, setShowSplash] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     const timer = setTimeout(() => setShowSplash(false), 2000);
@@ -27,6 +29,7 @@ const Home = ({ children }) => {
           animate="visible"
           exit="exit"
           transition={{ duration: 0.8, ease: "easeInOut" }}
+          onAnimationComplete={() => router.push("/login")}
         >
           <motion.img
             src="/images/stylish.png"
