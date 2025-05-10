@@ -40,8 +40,28 @@ const Login = () => {
             Forgot Password?
           </Link>
         </div>
-        <Button className={'mt-5 w-full h-[55px] text-xl'}>Login</Button>
+        <Button className={"mt-5 w-full h-[55px] text-xl"}>Login</Button>
       </form>
+
+      <div className="text-center">
+        <p className="text-[#575757] text-sm">- OR Continue with -</p>
+        <div className="flex mt-3 items-center justify-center gap-3">
+          <div className="w-[55px] flex justify-center rounded-full items-center bg-[#fcf3f6] h-[55px] border-2 border-[#f83758]">
+            <img src={"/images/google-1.png"} />
+          </div>
+          <div className="w-[55px] flex justify-center rounded-full items-center bg-[#fcf3f6] h-[55px] border-2 border-[#f83758]">
+            <img src={"/images/apple-1.svg"} />
+          </div>
+          <div className="w-[55px] flex justify-center rounded-full items-center bg-[#fcf3f6] h-[55px] border-2 border-[#f83758]">
+            <img src={"/images/facebook-1.svg"} />
+          </div>
+        </div>
+        <div className="mt-5 text-center">
+          <Link href={"#!"} className=" text-sm text-[#575757]">
+            Create An Account <span className="text-[#f83758]">Sign Up</span>
+          </Link>
+        </div>
+      </div>
     </AuthLayout>
   );
 };
